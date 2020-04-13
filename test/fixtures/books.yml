@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  isbn: MyString
+  name: MyString
+  genre: MyString
+  pages: 1
+  year: 1
+  language: MyString
+  publisher_id: 1
+  author_id: 1
+  shelf_id: 1
+
+two:
+  isbn: MyString
+  name: MyString
+  genre: MyString
+  pages: 1
+  year: 1
+  language: MyString
+  publisher_id: 1
+  author_id: 1
+  shelf_id: 1

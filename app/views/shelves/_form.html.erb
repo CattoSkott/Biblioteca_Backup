@@ -1,0 +1,27 @@
+<%= form_with(model: shelf, local: true) do |form| %>
+  <% if shelf.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(shelf.errors.count, "error") %> prohibited this shelf from being saved:</h2>
+
+      <ul>
+      <% shelf.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :number %>
+    <%= form.number_field :number, id: :shelf_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :side %>
+    <%= form.text_field :side, id: :shelf_side %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
