@@ -37,7 +37,7 @@ gem 'rails_admin', '~> 2.0'
 # gem 'capistrano-rails', group: :development
 
 group :production do
-	gem 'pg', '~> 1.2', '>= 1.2.3'
+	gem 'pg', '~> 1.1', '>= 1.1.4'
 end
 
 group :development, :test do
