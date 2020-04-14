@@ -1,4 +1,13 @@
+<% if user_signed_in? %>
+  <% if current_user.admin? %>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <% else %>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <% end %>
+<% else %>
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+<% end %>
+
   <a class="navbar-brand" >
       <img src="https://img.icons8.com/bubbles/2x/library.png" width="30" height="30" class="d-inline-block align-top" alt="">
       <%= link_to "Blibioteca Virtual", root_path, class:"navbar-brand" %>
@@ -38,7 +47,16 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+      <% if user_signed_in? %>
+        <% if current_user.admin? %>
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        <% else %>
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+        <% end %>
+      <% else %>
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+      <% end %>
+      
     </form>
   </div>
 </nav>
