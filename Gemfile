@@ -35,9 +35,10 @@ gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'rails_admin', '~> 2.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'owlcarousel-rails', '~> 2.2', '>= 2.2.3.5'
 
 group :production do
-	gem 'pg', '~> 1.1', '>= 1.1.4'
+	#gem 'pg', '~> 1.1', '>= 1.1.4'
 end
 
 group :development, :test do

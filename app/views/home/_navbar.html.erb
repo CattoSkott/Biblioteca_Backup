@@ -1,63 +1,56 @@
-<% if user_signed_in? %>
-  <% if current_user.admin? %>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-  <% else %>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-  <% end %>
-<% else %>
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-<% end %>
+<div class="top-bar">
+        <div class="container">
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item">
+                    <i class="fa fa-envelope"></i> <span>biblioteca-virtual@upslp.edu.mx</span>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-phone"></i> <span>444 812-65-19 o 444 812-63-67</span>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-clock-o"></i> <span>Horario de Atención: Lun - Vie 9.00 - 18.00</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+     <!--Top Bar  -->
+    <!-- Menu -->
+    <div class="main-menu">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <!-- logo -->
+                <a class="navbar-brand" href="#home">
+                    <img src="https://img.icons8.com/bubbles/2x/library.png" alt="header-Logo" class="logo"></a>
 
-  <a class="navbar-brand" >
-      <img src="https://img.icons8.com/bubbles/2x/library.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      <%= link_to "Blibioteca Virtual", root_path, class:"navbar-brand" %>
-    </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText">
+                    <span class="icon-bar"><i class="fa fa-bars fa-2x"></i></span>
+                </button>
+                <!--End of Resposive Toggle icon-->
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <%= link_to "About", home_about_path, class: "nav-link" %>
-      </li>
-      <% if user_signed_in? %>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= current_user.email %>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-             <%= link_to "Editar Perfil", edit_user_registration_path, class: "dropdown-item"  %>
-            <div class="dropdown-divider"></div>
-            
-              <%= link_to "Cerrar Sesión", destroy_user_session_path, class: "dropdown-item", method: :delete  %>
-            
-          </div>
-        </li>
-      <% else %>
-          <li class="nav-item">
-            <%= link_to "Iniciar Sesión", new_user_session_path, class: "nav-link"  %>
-          </li>
-          <li  class="nav-item">
-            <%= link_to "Registrarse", new_user_registration_path, class: "nav-link" %>
-          </li>
-      <% end %>
-      
-      
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <% if user_signed_in? %>
-        <% if current_user.admin? %>
-          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-        <% else %>
-          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-        <% end %>
-      <% else %>
-        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-      <% end %>
-      
-    </form>
-  </div>
-</nav>
-
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <!--Main menu navigation list-->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home" data-scroll-nav="0">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" data-scroll-nav="1">ACERCA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services" data-scroll-nav="2">SERVICIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio" data-scroll-nav="3">GÉNEROS LITERARIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog" data-scroll-nav="4">MENÚ EN LÍNEA</a>
+                        </li>
+                    </ul>
+                    <!--End of Main menu navigation list-->
+                </div>
+                <!--End of resposive collapse class-->
+            </nav>
+        </div>
+    </div>
+    <!-- Menu -->
+    <!-- ====== END NAVGITION ======  -->
